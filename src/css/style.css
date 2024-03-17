@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+}
+.game{
+    background-color: lightskyblue;
+    width: 100vw;
+    height: 100vh;
+}
+
+.start-screen{
+    text-align: center;
+    padding: 30px;
+    font-family: 'Consolas';
+    font-size: 35px;
+    width: 400px;
+    background-color:#ff7474;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top:30%;
+    
+}
+
+.start-screen:hover{
+    background-color: rgb(0, 255, 26);
+    cursor: pointer;
+}
