@@ -6,7 +6,15 @@ function startGame(state, game){
 }
 
 function gameLoop(state, game){
-    console.log(state.keys);
+    const { wizard } = state;
+    const { wizardElement } = game;
+
+    // Move wizard
+    if(state.keys.KeyD){
+        wizard.pozX += 2;
+    }
+
+    wizardElement.style.left = wizard.pozX + 'px';
 
     window.requestAnimationFrame(gameLoop.bind(null, state, game));
 }
