@@ -35,3 +35,13 @@ body {
     height: 100%;
     background-color: gold;
 }
+
+.wizard {
+    position: absolute;
+    background-image: url('/src/images/wizard.png');
+    background-size: cover;
+    width: 82px;
+    height: 100px;
+    top: 100px;
+    left: 100px;
+}
