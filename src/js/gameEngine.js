@@ -11,7 +11,7 @@ function gameLoop(state, game){
 
     // Move wizard
     if(state.keys.KeyD){
-        wizard.pozX += 2;
+        wizard.pozX += 10;
     }
 
     wizardElement.style.left = wizard.pozX + 'px';
