@@ -17,7 +17,8 @@ function initState(){
             width: 50,
             height: 50,
             nextSpawnTimestamp: 0,
-            maxSpawnInterval: 1500
+            maxSpawnInterval: 1500,
+            speed: 7
         },
 
         keys: {
