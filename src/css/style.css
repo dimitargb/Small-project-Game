@@ -51,3 +51,9 @@ body {
     background-image: url('/src/images/bug.png');
     background-size: cover;
 }
+
+.fireball {
+    position: absolute;
+    background-image: url('/src/images/fire-ball.png'); 
+    background-size: cover;
+}

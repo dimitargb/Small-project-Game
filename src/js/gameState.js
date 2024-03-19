@@ -21,13 +21,18 @@ function initState(){
             speed: 7
         },
 
+        fireball: {
+            width: 20,
+            height: 20
+        },
+
         keys: {
             KeyA: false,
             KeyW: false,
             KeyS: false,
             KeyD: false,
-            Space: false
-        }
+            Space: false,
+        },
     }
 
     return state;
