@@ -11,19 +11,19 @@ function gameLoop(state, game){
 
     // Move wizard
     if(state.keys.KeyA){
-        wizard.pozX -= wizard.speed;
+        wizard.pozX =  Math.max(wizard.pozX - wizard.speed, 0);
     }
 
     if(state.keys.KeyS){
-        wizard.pozY += wizard.speed;
+        wizard.pozY = Math.min(wizard.pozY + wizard.speed, game.gameScreen.offsetHeight - wizard.hight);
     }
 
     if(state.keys.KeyD){
-        wizard.pozX += wizard.speed;
+        wizard.pozX = Math.min(wizard.pozX + wizard.speed, game.gameScreen.offsetWidth - wizard.width);
     }
 
     if(state.keys.KeyW){
-        wizard.pozY -= wizard.speed;
+        wizard.pozY = Math.max(wizard.pozY - wizard.speed, 0)
     }
 
     wizardElement.style.left = wizard.pozX + 'px'; 
