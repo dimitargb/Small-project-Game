@@ -1,44 +1,39 @@
-
-function initGameObject(){
-    const startScreeen = document.querySelector('.start-screen');
+function initGameObject() {
+    const startScreen = document.querySelector('.start-screen');
     const gameScreen = document.querySelector('.game-screen');
+    const scoreScreen = document.querySelector('.score');
 
     return {
-        startScreeen,
+        startScreen,
         gameScreen,
-        createWizard(initialState){
+        scoreScreen,
+        createWizard(initialState) {
             let wizardElement = document.createElement('div');
             wizardElement.classList.add('wizard');
 
-            wizardElement.style.height = initialState.height + 'px';
             wizardElement.style.width = initialState.width + 'px';
+            wizardElement.style.height = initialState.height + 'px';
 
-            wizardElement.style.left = initialState.pozX + 'px';
-            wizardElement.style.top = initialState.pozY + 'px';
+            wizardElement.style.left = initialState.posX + 'px';
+            wizardElement.style.top = initialState.posY + 'px';
 
             this.wizardElement = wizardElement;
+
             gameScreen.appendChild(wizardElement);
 
             return wizardElement;
         },
+        createFireball(wizard, fireball) {
+            let fireballElement = document.createElement('div');
+            fireballElement.classList.add('fireball');
+            fireballElement.style.left = wizard.posX + wizard.width + 'px';
+            fireballElement.style.top = wizard.posY + wizard.height / 3 + 5 + 'px';
+            fireballElement.style.width = fireball.width + 'px';
+            fireballElement.style.height = fireball.height + 'px';
 
-        createFireabll(wizard, fireball){
-
-            let fireBallElement = document.createElement('div');
-            fireBallElement.classList.add('fireball');
-
-            fireBallElement.style.left = wizard.pozX + wizard.width + 'px';
-            fireBallElement.style.top = wizard.pozY + wizard.height / 3 + 'px';
-
-            fireBallElement.style.width = fireball.width + 'px';
-            fireBallElement.style.height = fireball.height + 'px';
-
-
-            gameScreen.appendChild(fireBallElement);
-
+            gameScreen.appendChild(fireballElement);
         },
-
-        createBug(stats){
+        createBug(stats) {
             const bugElement = document.createElement('div');
             bugElement.classList.add('bug');
             bugElement.style.width = stats.width + 'px';
@@ -46,7 +41,7 @@ function initGameObject(){
             bugElement.style.left = gameScreen.offsetWidth - stats.width + 'px';
             bugElement.style.top = Math.floor(Math.random() * (gameScreen.offsetHeight - stats.height)) + 'px';
 
-            gameScreen.appendChild(bugElement)
+            gameScreen.appendChild(bugElement);
         }
     };
 }
